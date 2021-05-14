@@ -9,7 +9,7 @@ This repository contains my proposed implementation for benchmarking to evaluate
 
 2. I use the deep learning models from my Master Thesis for benchmarking purpose. The first model is a modified VGG19 based on a study by Deitsch et al. (**Model A**), and the other is a modified concatenated model first proposed in a study from Rahimzadeh et al. (**Model B**).
 
-![](images/Model A.png)
+![](images/Model%20A.png)
 
 3. I use the following datasets for the benchmark.
 * The **original MNIST dataset** developed by Yann LeCun et al.
