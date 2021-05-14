@@ -9,8 +9,13 @@ To evaluate the hardware performance, the following metrics are used:
 I use the deep learning models from my Master Thesis for thg benchmark purpose: the first model is a modified VGG19 based on a study by Deitsch et al., and the other is a modified concatenated model first proposed in a study from Rahimzadeh et al.
 
 I use the following datasets for the benchmark.
-* The original MNIST dataset developed by Yann LeCun.
-* The Zalando MNIST dataset developed by Han Xiao.
+* The **original MNIST dataset** developed by Yann LeCun et al.
+
+![MNIST](images/mnist.png)
+
+* The **Zalando MNIST dataset** developed by Han Xiao.
+
+![Zalando](images/fashion.png)
 
 # References
 <a id="1">[1]</a> 
@@ -19,5 +24,5 @@ F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion,O. Grisel, M. Blo
 <a id="2">[2]</a>
 F. Chollet, “Keras,” 2015. https://github.com/fchollet/keras
 
-<a id ="3">[3}</a>
+<a id ="3">[3]</a>
 Xiao, K. Rasul, and R. Vollgraf, “A Novel Image Dataset for Benchmarking Machine Learning Algorithms,” 2017. https://github.com/zalandoresearch/fashion-mnist
