@@ -10,13 +10,16 @@ This repository contains my proposed implementation for benchmarking to evaluate
 2. I use the deep learning models from my Master Thesis for benchmarking purpose. The first model is a modified VGG19 based on a study by Deitsch et al. (**Model A**), and the other is a modified concatenated model first proposed in a study from Rahimzadeh et al. (**Model B**).
 
 ![](images/Model%20A.png)
+Figure 1: Network architecture of Model A. This model consists of a VGG19 convolutional base followed by four convolutional layers, a Global Average layer, and finally three neural layers. 
 
 3. I use the following datasets for the benchmark.
 * The **original MNIST dataset** developed by Yann LeCun et al.
 
 ![](images/mnist.png)
+Figure 3: Visualization of the original MNIST dataset developed by Yann LeCun et al.
 
-* The **Zalando MNIST dataset** developed by Han Xiao.
+* The **Zalando MNIST dataset** developed by Han Xiao et al.
+Figure 4: Visualization of the Zalando MNIST dataset developed by Han Xiao et al.
 
 ![](images/zalando.png)
 
