@@ -46,4 +46,16 @@ F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion,O. Grisel, M. Blo
 F. Chollet, “Keras,” 2015. https://github.com/fchollet/keras
 
 <a id ="3">[3]</a>
+Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner, "Gradient-based learning applied to document recognition," Proceedings of the IEEE, 1998.
+
+<a id ="4">[4]</a>
 Xiao, K. Rasul, and R. Vollgraf, “A Novel Image Dataset for Benchmarking Machine Learning Algorithms,” 2017. https://github.com/zalandoresearch/fashion-mnist
+
+<a id = "5">[5]</a>
+H. Vo, “Realization and Verification of Deep Learning Models for FaultDetection and Diagnosis of Photovoltaic Modules,” Master’s Thesis, Aalto University. School of Electrical Engineering, 2021.
+
+<a id = "6">[6]</a>
+S. Deitsch, V. Christlein, S. Berger, C. Buerhop-Lutz, A. Maier, F. Gallwitz,and C. Riess, “Automatic classification of defective photovoltaic module cells inelectroluminescence images,”Solar Energy, vol. 185, p. 455–468, 06-2019.
+
+<a id = "7">[7]</a>
+M. Rahimzadeh and A. Attar, “A modified deep convolutional neural networkfor detecting COVID-19 and pneumonia from chest X-ray images based on theconcatenation of Xception and ResNet50V2,”Informatics in MedicineUnlocked, vol. 19, p. 100360, 2020.
