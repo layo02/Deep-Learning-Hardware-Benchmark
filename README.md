@@ -32,10 +32,10 @@ Component | Description
 
 The results of my benchmark are as follows:
 
-Test | Execution Time (s) | Inference Time (s) | Error
-| ------------ | ------------- | ------------- | ------------- |
-|Original MNIST | 3553 | No error |
-| Fashion MNIST | 3770 | No error |
+Test | Execution Time (s) |
+| ------------ | ------------- |
+|Original MNIST | 3553 |
+| Fashion MNIST | 3770 |
 
 
 # References
