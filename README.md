@@ -4,7 +4,7 @@ This repository contains my proposed implementation for benchmarking in order to
 ## Materials and Methods
 1. To evaluate the hardware performance, the following metrics are used:
   * The **total execution time** (training + validation time) of a deep learning model on a dataset.
-  * The **total inference time** (model loading + prediction time) of a deep learning on a test dataset.
+  * (Optional) The **total inference time** (model loading + prediction time) of a deep learning on a test dataset.
   * The **presence of potential computing resources error** including but not limited to the Out-Of-Memory (OOM) error.
 
 2. I use the deep learning models from my Master Thesis for thg benchmark purpose: the first model is a modified VGG19 based on a study by Deitsch et al., and the other is a modified concatenated model first proposed in a study from Rahimzadeh et al.
@@ -16,7 +16,7 @@ This repository contains my proposed implementation for benchmarking in order to
 
 * The **Zalando MNIST dataset** developed by Han Xiao.
 
-![](images/fashion.png)
+![](images/zalando.png)
 
 4. Please refer the `Instruction Guide.ipynb` to install Python, Tensorflow, and other dependencies.
 
