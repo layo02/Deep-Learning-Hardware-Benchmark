@@ -9,4 +9,4 @@ F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion,O. Grisel, M. Blo
 F. Chollet, “Keras,” 2015. https://github.com/fchollet/keras
 
 <a id ="3">[3}</a>
-Xiao, K. Rasul, and R. Vollgraf, “a Novel Image Dataset for Benchmarking Machine Learning Algorithms,” 2017.
+Xiao, K. Rasul, and R. Vollgraf, “a Novel Image Dataset for Benchmarking Machine Learning Algorithms,” 2017. https://github.com/zalandoresearch/fashion-mnist
