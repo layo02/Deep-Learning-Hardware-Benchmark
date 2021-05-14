@@ -26,3 +26,4 @@ dependencies:
         - bayesian-optimization
         - gym
         - kaggle
+        - visualkeras
