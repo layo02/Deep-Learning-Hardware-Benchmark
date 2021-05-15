@@ -42,6 +42,11 @@ Test | Model A (s)| Model B (s)|
 |Original MNIST | 3758 |
 | Fashion MNIST | 3780 |
 
+When running the benchmark on Model B, I encoutered the following issue.
+```
+W tensorflow/core/common_runtime/bfc_allocator.cc:243] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.42GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+```
+This issue is not an error, as mentioned in the message itself, but it is an indicator notifying that the task was too demanding that my GPU could not keep it.
 
 # References
 <a id="1">[1]</a> 
