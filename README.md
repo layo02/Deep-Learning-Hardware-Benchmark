@@ -1,6 +1,8 @@
 # Deep-Learning-Hardware-Benchmark
 This repository contains my proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for deep learning projects. 
 
+## Scope
+
 ## Materials and Methods
 1. To evaluate the hardware performance, the following metrics are used:
   * The **total execution time** (training + validation time) of a deep learning model on a dataset.
