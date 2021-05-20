@@ -75,7 +75,7 @@ Operation | Excution time (s)| FLOPS
 Table 4: Results of the benchmark on GEMM and RNN
 
 
-When running the benchmark on Model B, I encoutered the following issue.
+When running the benchmark on Model B, we encoutered the following issue.
 ```
 W tensorflow/core/common_runtime/bfc_allocator.cc:243] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.42GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
 ```
