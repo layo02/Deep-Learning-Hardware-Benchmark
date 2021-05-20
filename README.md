@@ -5,6 +5,9 @@ This repository contains the proposed implementation for benchmarking to evaluat
 
 This project is the collaboration between Aalto University and RMIT Vietnam.
 
+Authors: Vinh-Khuong Nguyen, Associated Lecturer, RMIT Vietnam
+Huynh Quang Nguyen Vo, Doctoral Candidate, Aalto University
+
 ## Scope
 
 ## Materials and Methods
