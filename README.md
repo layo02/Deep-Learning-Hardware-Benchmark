@@ -1,5 +1,9 @@
 # Deep-Learning-Hardware-Benchmark
-This repository contains my proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for deep learning projects. 
+
+## Introduction
+This repository contains the proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for deep learning projects.
+
+This project is the collaboration between Aalto University and RMIT Vietnam.
 
 ## Scope
 
