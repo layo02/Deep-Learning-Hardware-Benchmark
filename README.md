@@ -1,14 +1,11 @@
 # Deep-Learning-Hardware-Benchmark
-<img src="images/build-passing.png" width="150"/>
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+<img src="images/build-passing.png" width="100"/>
+
+
 
 ## Introduction
 This repository contains the proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for deep learning projects.
-
-This project is the collaboration between Aalto University and RMIT Vietnam.
-
-Authors: 
-* Vinh-Khuong Nguyen, Associated Lecturer, RMIT Vietnam
-* Huynh Quang Nguyen Vo, Doctoral Candidate, Aalto University
 
 ## Scope
 
@@ -62,7 +59,14 @@ W tensorflow/core/common_runtime/bfc_allocator.cc:243] Allocator (GPU_0_bfc) ran
 ```
 This issue is not an error, as mentioned in the message itself, but it is an indicator notifying that the task was too demanding that my GPU could not keep it.
 
-# References
+## Acknowledgements
+This project is the collaboration between Aalto University and RMIT Vietnam.
+
+Authors: 
+* Vinh-Khuong Nguyen, Associated Lecturer, RMIT Vietnam
+* Huynh Quang Nguyen Vo, Doctoral Candidate, Aalto University
+
+## References
 <a id="1">[1]</a> 
 F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion,O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vander-plas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay,“Scikit-learn: Machine learning in Python,” Journal of Machine Learning Research, vol. 12, pp. 2825–2830, 2011.
 
