@@ -58,22 +58,29 @@ Component | Description
 Table 2: Information of the setup used as the baseline for comparison.
 
 
-Test | Model A (s)| Model B (s)| FLOPS 
-| ------------ | ------------- | ------------- |
-| Original MNIST | 3758 | |
-| Fashion MNIST | 3780 | 
+| Test    | Model A (s)   | Model B (s)   | FLOPS |
+|---------|---------------|---------------|-------|
+| MNIST   | <Placeholder> | <Placeholder> |       |
+| Zalando | <Placeholder> | <Placeholder> |       | 
 
 Table 3: Results of the benchmark on MNIST and Zalando datasets.
 
 
-Operation | Excution time (s)| FLOPS 
-| ------------ | ------------- | 
-| Dense Matrix Multiplication | 3758 | sda |
-| Sparse Matrix Multiplication | 3780 |  sdsd |
-| Convolution | sfsfaf| Sfsf
+| Operation                    | Excution time (s) | FLOPS         |
+|------------------------------|-------------------|---------------|
+| Dense Matrix Multiplication  | <Placeholder>     | <Placeholder> |
+| Sparse Matrix Multiplication | <Placeholder>     | <Placeholder> |
+| Convolution                  | <Placeholder>     | <Placeholder> |
+| Recurrent Neural Network     | <Placeholder>     | <Placeholder> |
 
 Table 4: Results of the benchmark on GEMM and RNN
 
+| Test    | Model A (s)   | Model B (s)   |
+|---------|---------------|---------------|
+| MNIST   | <Placeholder> | <Placeholder> |
+| Zalando | <Placeholder> | <Placeholder> |
+
+Table 5: Results of the benchmark on GEMM and RNN
 
 When running the benchmark on Model B, we encoutered the following issue.
 ```
