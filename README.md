@@ -1,4 +1,5 @@
 # Deep-Learning-Hardware-Benchmark
+<img src="images/build-passing.png" width="150"/>
 
 ## Introduction
 This repository contains the proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for deep learning projects.
