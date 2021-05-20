@@ -2,25 +2,29 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Introduction
-This repository contains the proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for deep learning projects.
+This repository contains the proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for complex deep learning projects.
 
 ## Scope
+* The benchmark evaluates the performance of a setup having a single CPU, a single GPU, RAM and memory storage. The performance of a multi-CPUs/multi-GPUs or server-based is not considered.
+* The benchmark is built on the **Anaconda** distribution of Python, and the **Jupyter Notebook** IDE.
 
-## Materials and Methods
-1. To evaluate the hardware performance, the following metrics are used:
-  * The **total execution time** (training + validation time) of a deep learning model on a dataset.
-  * (Optional) The **total inference time** (model loading + prediction time) of deep learning on a test dataset.
-  * The **presence of potential computing resources error** including but not limited to the Out-Of-Memory (OOM) error.
+## Evaluation metrics:
+To evaluate the performance, the following metrics are used:
+1. **Total execution time**: the **total execution time** includes both the **total training time** and the **total validation time** of a deep learning model on a dataset after a defined number of epochs. Here, the number of epochs is 100. The lower the **total execution time** the better.
+2. **Total inference time**: the **total inference time** includes both the **model loading time** (the time required to fully load a set of pre-trained weights to implement a model) and the **total prediction time** of a deep learning model on a test dataset. Similar to the **total execution time**, the lower the **total inference time** the better.
+3. **FLOPS**: the performance capability of a CPU or GPU can be measured by counting the number of floating operation points (FLO) it can execute per second. Thus, the higher the **FLOPS**, the better. 
+4. **Computing resources issues/errors**: Ideally, a better performed setup will not encounter any computing resources issues/errors including but not limited to the Out-Of-Memory (OOM) error. 
 
-2. I use the deep learning models from my Master Thesis for benchmarking purpose. The first model is a modified VGG19 based on a study by Deitsch et al. (**Model A**), and the other is a modified concatenated model first proposed in a study from Rahimzadeh et al. (**Model B**).
+## Methods
+To evalute the hardware performance,  two deep learning models are deployed for benchmarking purpose. The first model is a modified VGG19 based on a study by Deitsch et al. (**Model A**) [6], and the other model is a modified concatenated model proposed in a study from Rahimzadeh et al. (**Model B**) [7]. These models were previously implemented in Vo et al [5].
 
 ![](images/ModelA.png)
-Figure 1: Network architecture of **Model A**. This model consists of a **VGG19 convolutional base** followed by four **convolutional layers**, a **Global Average Pooling** layer, and finally three **fully-connected neural** layers (the **Dropout** layers are excluded, but they are still presented in the actual implementation).
+Figure 1: Network architecture of **Model A**. This model consists of a **VGG19 convolutional base** followed by four **convolutional layers**, a **Global Average Pooling** layer, and finally three **fully-connected neural** layers (the **Dropout** layers are excluded, but they are still presented in the actual implementation) [5].
 
 ![](images/ModelB.png)
-Figure 1: Network architecture of Model B. This model consists of two **convolutional bases** that are **Xception** and **ResNet151V2**, followed by a **concatenated** layer, a **convolutional** layer, a **Global Average Pooling** layer, and finally three **fully-connected neural** layers (the **Dropout** layers are excluded, but they are still presented in the actual implementation). 
+Figure 2: Network architecture of **Model B**. This model consists of two **convolutional bases** that are **Xception** and **ResNet151V2**, followed by a **concatenated** layer, a **convolutional** layer, a **Global Average Pooling** layer, and finally three **fully-connected neural** layers (the **Dropout** layers are excluded, but they are still presented in the actual implementation) [5]. 
 
-3. I use the following datasets for the benchmark.
+The following datasets for benchmarking are used:
 * The **original MNIST dataset** developed by Yann LeCun et al.
 
 ![](images/mnist.png)
@@ -47,7 +51,7 @@ Component | Description
 
 Test | Model A (s)| Model B (s)|
 | ------------ | ------------- | ------------- |
-|Original MNIST | 3758 |
+| Original MNIST | 3758 |
 | Fashion MNIST | 3780 |
 
 When running the benchmark on Model B, I encoutered the following issue.
