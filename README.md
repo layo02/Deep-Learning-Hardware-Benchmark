@@ -35,15 +35,16 @@ Figure 4: Visualization of the Zalando MNIST dataset developed by Han Xiao et al
 
 ![](images/zalando.png)
 
-On the other hand, the **total execution time** for General Matrix to Matrix Multiplication (GEMM) and recurrent neural network (RNN) can be considered as a simple alternative to model and validation. Basic operations in GEMM include Dense Matrix Multiplication, Sparse Matrix Multiplication, and Convolution. Thus, these operations exist in almost all deep neural networks today. Table 1 below outlines each basic operation to its corresponding role in a typical deep learning model.
+On the other hand, the **total execution time** for General Matrix to Matrix Multiplication (GEMM), Stacking Convolution and recurrent neural network (RNN) can be considered as a simple alternative to model and validation. Basic operations in GEMM include Dense Matrix Multiplication, Sparse Matrix Multiplication, and Convolution. Thus, these operations exist in almost all deep neural networks today. Table 1 below outlines how we performed our benchmark using basic operations.
 
-Operation | Application | 
+Test | Description | 
 | ------------ | ------------- |
-| Dense Matrix Multiplication | Dense Neural Layer |
-| Sparse Matrix Multiplication | Dense Neural Layer with Dropout |
-| Convolution | Convolution Layer |
+| Dense Matrix Multiplication | (3072,128,1024); (5124,9124,2560); (2560,64,2560); (7860,64,2560; (1760,128,1760)|
+| Sparse Matrix Multiplication | (10752,1,3584,0.9) (7680,1500,2560,0.95) (7680,2,2560,0.95) (7680,1,2560,0.95)|
+| Convolution | a simple model as defined in Figure 5|
+| Recurrent |
 
-Table 1: Basic operations in GEMM and its corresponding application in deep learning.
+Table 1: Benchmark mBasic operations in GEMM and its corresponding application in deep learning.
 
 ## Results
 To provide a solid baseline for comparison among different setups, we benchmarked our own computing resources and recorded the results. Table 2 below provides the information of our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
