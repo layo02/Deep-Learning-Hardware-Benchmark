@@ -40,7 +40,7 @@ On the other hand, the **total execution time** for General Matrix to Matrix Mul
 Operation | Application | 
 | ------------ | ------------- |
 | Dense Matrix Multiplication | Dense Neural Layer |
-| Sparse Matrix Multiplication | Dense Neural Layerr with Dropout |
+| Sparse Matrix Multiplication | Dense Neural Layer with Dropout |
 | Convolution | Convolution Layer |
 
 Table 1: Basic operations in GEMM and its corresponding application in deep learning.
@@ -93,8 +93,8 @@ This issue is not an error, as mentioned in the message itself, but it is an ind
 This project is the collaboration between Aalto University and RMIT Vietnam.
 
 Contributors: 
-* Vinh-Khuong Nguyen, Associated Lecturer, RMIT Vietnam
-* Huynh Quang Nguyen Vo, Doctoral Candidate, Aalto University
+* Vinh-Khuong Nguyen (Dr), Associated Lecturer, RMIT Vietnam
+* Huynh Quang Nguyen Vo (MSc), Doctoral Candidate, Aalto University
 
 ## Appendix
 1. For the theoretical backgrounds behind GEMM and recurrent network, please refer to the `Thereotical Background.ipynb` file.
