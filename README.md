@@ -35,16 +35,16 @@ Figure 4: Visualization of the Zalando MNIST dataset developed by Han Xiao et al
 
 ![](images/zalando.png)
 
-On the other hand, the **total execution time** for General Matrix to Matrix Multiplication (GEMM), Stacking Convolution and recurrent neural network (RNN) can be considered as a simple alternative to model and validation. Basic operations in GEMM include Dense Matrix Multiplication, Sparse Matrix Multiplication, and Convolution. Thus, these operations exist in almost all deep neural networks today. Table 1 below outlines how we performed our benchmark using basic operations.
+On the other hand, the **total execution time** for General Matrix to Matrix Multiplication (GEMM), Stacking 2D-Convolution and recurrent neural network (RNN) can be considered as a simple alternative to model and validation. Basic operations in GEMM include Dense Matrix Multiplication, Sparse Matrix Multiplication, and Convolution. Thus, these operations exist in almost all deep neural networks today. Table 1 below outlines how we performed our benchmark using basic operations.
 
 Test | Description | 
 | ------------ | ------------- |
-| Dense Matrix Multiplication | (3072,128,1024); (5124,9124,2560); (2560,64,2560); (7860,64,2560; (1760,128,1760)|
-| Sparse Matrix Multiplication | (10752,1,3584,0.9) (7680,1500,2560,0.95) (7680,2,2560,0.95) (7680,1,2560,0.95)|
-| Convolution | a simple model as defined in Figure 5|
-| Recurrent |
+| Dense Matrix Multiplication (DMM)| (3072,128,1024); (5124,9124,2560); (2560,64,2560); (7860,64,2560; (1760,128,1760)|
+| Sparse Matrix Multiplication (SMM)| (10752,1,3584,0.9) (7680,1500,2560,0.95) (7680,2,2560,0.95) (7680,1,2560,0.95)|
+| Stacking 2D-Convolution (Conv2D) | A simple model as defined in Figure 5|
+| Recurrent Neural Network (RNN) | A simple model as defined in Figure 6|
 
-Table 1: Benchmark mBasic operations in GEMM and its corresponding application in deep learning.
+Table 1: The benchmark approach using basic operations in GEMM. In Dense Matrix Multiplication, we defined a matrix C as a product of (MxN) and (NxK) matrices. For example, (3072,128,1024) means the resulting matrix is a product of (3072x128) and (128x1024) matrices. In Sparse Matrix Multiplication, we defined a matrix C as a product of (MxN) and (NxK) matrices, and (100 - Dx100)% of the (MxN) matrix is obmitted. For instance, (10752,1,3584,0.9) means the resulting matrix is a product of (10752x1) and (1x3584) matrices, while 10% of the (10752x1) matrix is obmitted. 
 
 ## Results
 To provide a solid baseline for comparison among different setups, we benchmarked our own computing resources and recorded the results. Table 2 below provides the information of our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
