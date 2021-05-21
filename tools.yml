@@ -1,8 +1,3 @@
- # conda create --name tensorflow-cpu python=3.8
- # conda install jupyter
- # conda install nb_conda
- # conda install -c anaconda tensorflow
- # conda env update --file tools.yml
 dependencies:
     - jupyter
     - scikit-learn
@@ -22,8 +17,4 @@ dependencies:
     - keras
     - bokeh
     - sympy
-    - pip:
-        - bayesian-optimization
-        - gym
-        - kaggle
-        - visualkeras
+    - openpyxl

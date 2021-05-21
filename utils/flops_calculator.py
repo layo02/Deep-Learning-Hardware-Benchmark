@@ -8,7 +8,7 @@ def get_flops(model):
 
     with graph.as_default():
         with session.as_default():
-            model = finalModel
+            model = model
             
             run_meta = tensorflow.compat.v1.RunMetadata()
             opts = tensorflow.compat.v1.profiler.ProfileOptionBuilder.float_operation()
@@ -17,7 +17,7 @@ def get_flops(model):
             # Use the Keras session graph in the call to the profiler:
             #
             flops = tensorflow.compat.v1.profiler.profile(graph = graph,
-                                                  run_meta = run_meta, cmd='op', options=opts)
+                                                  run_meta = run_meta, cmd ='op', options=opts)
 
     tensorflow.compat.v1.reset_default_graph()
 
