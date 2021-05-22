@@ -39,18 +39,22 @@ On the other hand, we also proposed another approach for benchmarking that is mu
 
 Test | Description | 
 | ------------ | ------------- |
-| Dense Matrix Multiplication (DMM)| (3072,128,1024); (5124,9124,2560); (2560,64,2560); (7860,64,2560); (1760,128,1760)|
-| Sparse Matrix Multiplication (SMM)| (10752,1,3584,0.9) (7680,1500,2560,0.95) (7680,2,2560,0.95) (7680,1,2560,0.95)|
+| Dense Matrix Multiplication (DMM)| |
+| Sparse Matrix Multiplication (SMM)| |
 | Stacking 2D-Convolution (Convolve2D) | A simple model as defined in Figure 5|
 | Recurrent Neural Network (RNN) | A simple model as defined in Figure 6|
 
 Table 1: The benchmark approach using basic operations. 
 
 Below is our description of the alternative benchmark approach:
-* In DMM, we defined a matrix C as a product of (MxN) and (NxK) matrices. For example, (3072,128,1024) means the resulting matrix is a product of (3072x128) and (128x1024) matrices. To benchmark, we implemented five different multiplications, and measured the overall **total excution time** of these five.
-* In SMM, we defined a matrix C as a product of (MxN) and (NxK) matrices, and (100 - Dx100)% of the (MxN) matrix is obmitted. For instance, (10752,1,3584,0.9) means the resulting matrix is a product of (10752x1) and (1x3584) matrices, while 10% of the (10752x1) matrix is obmitted. To benchmark, we implemented four different multiplications, and measured the overall **total excution time** of these five.
-* In Convolve2D, we defined a simple model containing only convolution layers as in Figure 5, and measured the resulting **total execution time**.
-* In RNN, we defined a simple model containing recurrent neural layers as in Figure 6, and measured the resulting **total execution time**. 
+* In DMM, we defined a matrix C as a product of (MxN) and (NxK) matrices. For example, (3072,128,1024) means the resulting matrix is a product of (3072x128) and (128x1024) matrices. To benchmark, we implemented five different multiplications, and measured the overall **total excution time** of these five. These multiplications included (3072,128,1024), (5124,9124,2560), (2560,64,2560), (7860,64,2560), and (1760,128,1760).
+* In SMM, we defined a matrix C as a product of (MxN) and (NxK) matrices, and (100 - Dx100)% of the (MxN) matrix is obmitted. For instance, (10752,1,3584,0.9) means the resulting matrix is a product of (10752x1) and (1x3584) matrices, while 10% of the (10752x1) matrix is obmitted. To benchmark, we implemented four different multiplications, and measured the overall **total excution time** of these five. These multiplications included (10752,1,3584,0.9), (7680,1500,2560,0.95), (7680,2,2560,0.95), and (7680,1,2560,0.95).
+* In Convolve2D, we defined a simple model containing only convolution layers and pooling layers as in Figure 5, and measured the resulting **total execution time**.
+* In RNN, we defined a simple model containing recurrent neural layers as in Figure 6, and measured the resulting **total execution time**.
+
+
+![](images/Conv.png)
+Figure 5: A simple model containing only convolution layers and pooling layers for the another benchmark approach.
 
 ## Results
 To provide a solid baseline for comparison among different setups, we benchmarked our own computing resources and recorded the results. Table 2 below provides the information of our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
