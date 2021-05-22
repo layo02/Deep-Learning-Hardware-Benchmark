@@ -53,9 +53,13 @@ Below is our description of the alternative benchmark approach:
 * In RNN, we defined a simple model containing recurrent neural layers as in Figure 6, and measured the resulting **total execution time**.
 
 
-![](images/Conv.png)
+![](images/Conv1.png)
 
-Figure 5: A simple model containing only convolution layers and pooling layers for the another benchmark approach.
+Figure 5: A simple model containing only convolution layers and pooling layers for the other benchmark approach.
+
+![](images/RNN.png)
+
+Figure 5: A simple model containing only recurrent neural layers for the other benchmark approach.
 
 ## Results
 To provide a solid baseline for comparison among different setups, we benchmarked our own computing resources and recorded the results. Table 2 below provides the information of our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
