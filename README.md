@@ -54,6 +54,7 @@ Below is our description of the alternative benchmark approach:
 
 
 ![](images/Conv.png)
+
 Figure 5: A simple model containing only convolution layers and pooling layers for the another benchmark approach.
 
 ## Results
