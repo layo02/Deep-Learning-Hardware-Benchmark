@@ -74,9 +74,9 @@ Component | Description
 Table 2: Information of the setup used as the baseline for comparison.
 
 
-|     | MNIST  | Zalando  | FLOPS (10^9) |
+|     | MNIST (s) | Zalando (s) | FLOPS (10^9) |
 |---------|---------------|---------------|-------|
-| Model A   | <Placeholder> | <Placeholder> |  0.1155 |
+| Model A   | 2317 | 2347 |  0.1155 |
 | Model B | <Placeholder> | <Placeholder> |       | 
 
 Table 3: Results of the benchmark on MNIST and Zalando datasets.
