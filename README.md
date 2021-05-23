@@ -35,14 +35,14 @@ Figure 4: Visualization of the Zalando MNIST dataset developed by Han Xiao et al
 
 ![](images/zalando.png)
 
-On the other hand, we also proposed another approach for benchmarking that is much simpler and quicker: evaluating the **total execution time** for a combination of basic operations. These basic operations include General Matrix to Matrix Multiplication (GEMM), 2D-Convolution (Convolve2D) and Recurrent Neural Network (RNN), and exist in almost all deep neural networks today. Table 1 below outlines how we performed our benchmark using basic operations.
+On the other hand, we also proposed another approach for benchmarking that is much simpler and quicker: evaluating the **total execution time** for a combination of basic operations. These basic operations include General Matrix to Matrix Multiplication (GEMM), 2D-Convolution (Convolve2D) and Recurrent Neural Network (RNN), and exist in almost all deep neural networks today. Table 1 below outlines how these basic operations are applicable in Deep Learning.
 
-Test | Description | 
+Test | Application | 
 | ------------ | ------------- |
-| Dense Matrix Multiplication (DMM)| |
-| Sparse Matrix Multiplication (SMM)| |
-| Stacking 2D-Convolution (Convolve2D) | A simple model as defined in Figure 5|
-| Recurrent Neural Network (RNN) | A simple model as defined in Figure 6|
+| Dense Matrix Multiplication (DMM)| Dense Neural Network |
+| Sparse Matrix Multiplication (SMM)| Dense Neural Network with Dropout |
+| Stacking 2D-Convolution (Convolve2D) | Convolution Neural Network|
+| Recurrent Neural Network (RNN) | Dealing with Time Series Data/ Natural Language Processing |
 
 Table 1: The benchmark approach using basic operations. 
 
@@ -59,7 +59,7 @@ Figure 5: A simple model containing only convolution layers and pooling layers f
 
 ![](images/RNN.png)
 
-Figure 5: A simple model containing only recurrent neural layers for the other benchmark approach.
+Figure 6: A simple model containing only recurrent neural layers for the other benchmark approach.
 
 ## Results
 To provide a solid baseline for comparison among different setups, we benchmarked our own computing resources and recorded the results. Table 2 below provides the information of our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
