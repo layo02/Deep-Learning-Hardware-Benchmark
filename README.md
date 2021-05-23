@@ -74,35 +74,22 @@ Component | Description
 Table 2: Information of the setup used as the baseline for comparison.
 
 
-| Test    | Model A (s)   | Model B (s)   | FLOPS |
+|     | MNIST  | Zalando  | FLOPS (10^9) |
 |---------|---------------|---------------|-------|
-| MNIST   | <Placeholder> | <Placeholder> |       |
-| Zalando | <Placeholder> | <Placeholder> |       | 
+| Model A   | <Placeholder> | <Placeholder> |  0.1155 |
+| Model B | <Placeholder> | <Placeholder> |       | 
 
 Table 3: Results of the benchmark on MNIST and Zalando datasets.
 
 
 | Operation                    | Excution time (s) | FLOPS         |
 |------------------------------|-------------------|---------------|
-| Dense Matrix Multiplication  | 1.74     | <Placeholder> |
-| Sparse Matrix Multiplication | 14.97     | <Placeholder> |
-| Convolution                  | 217.42     | <Placeholder> |
-| Recurrent Neural Network     | <Placeholder>     | <Placeholder> |
+| DMM  | 1.74     | <Placeholder> |
+| SMM | 14.97     | <Placeholder> |
+| Convolve2D | 217.42     | <Placeholder> |
+| RNN     | <Placeholder>     | <Placeholder> |
 
-Table 4: Results of the benchmark on GEMM and RNN
-
-| Test    | Model A (s)   | Model B (s)   |
-|---------|---------------|---------------|
-| MNIST   | <Placeholder> | <Placeholder> |
-| Zalando | <Placeholder> | <Placeholder> |
-
-Table 5: Results of the benchmark on GEMM and RNN
-
-When running the benchmark on Model B, we encoutered the following issue.
-```
-W tensorflow/core/common_runtime/bfc_allocator.cc:243] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.42GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-```
-This issue is not an error, as mentioned in the message itself, but it is an indicator notifying that the task was too demanding that my GPU could not keep it.
+Table 4: Results of the benchmark on GEMM, Convolve2D, and RNN.
 
 
 ## Acknowledgements
