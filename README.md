@@ -5,18 +5,18 @@
 This repository contains the proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for complex deep learning projects.
 
 ## Scope
-* The benchmark evaluates the performance of a setup having a single CPU, a single GPU, RAM and memory storage. The performance of a multi-CPUs/multi-GPUs or server-based is not considered.
-* The benchmark is built on the **Anaconda** distribution of Python, and the **Jupyter Notebook** IDE. The deep learning models mentioned in this benchmarked are implemented uisng Keras.
+* The benchmark evaluates the performance of a setup having a single CPU, a single GPU, RAM and memory storage. The performance of multi-CPUs/multi-GPUs or server-based is not considered.
+* The benchmark is built on the **Anaconda** distribution of Python, and the **Jupyter Notebook** IDE. The deep learning models mentioned in this benchmarked are implemented using Keras.
 
 ## Evaluation metrics:
 To evaluate the performance, the following metrics are used:
 1. **Total execution time**: the **total execution time** includes both the **total training time** and the **total validation time** of a deep learning model on a dataset after a defined number of epochs. Here, the number of epochs is 100. The lower the **total execution time** the better.
 2. **Total inference time**: the **total inference time** includes both the **model loading time** (the time required to fully load a set of pre-trained weights to implement a model) and the **total prediction time** of a deep learning model on a test dataset. Similar to the **total execution time**, the lower the **total inference time** the better.
 3. **FLOPS**: the performance capability of a CPU or GPU can be measured by counting the number of floating operation points (FLO) it can execute per second. Thus, the higher the **FLOPS**, the better. 
-4. **Computing resources issues/errors**: Ideally, a better performed setup will not encounter any computing resources issues/errors including but not limited to the Out-Of-Memory (OOM) error. 
+4. **Computing resources issues/errors**: Ideally, a better-performed setup will not encounter any computing resources issues/errors including but not limited to the Out-Of-Memory (OOM) error. 
 
 ## Methods
-To evalute the hardware performance, two deep learning models are deployed for benchmarking purpose. The first model is a modified VGG19 based on a study by Deitsch et al. (**Model A**) [1], and the other model is a modified concatenated model proposed in a study from Rahimzadeh et al. (**Model B**) [2]. These models were previously implemented in Vo et al [3]. The model compilation, training and validation practices are similar to those mentioned in Vo et al [3]. Besides, the mixed precision policy is applied for model training to make it run faster and consume less memory.
+To evaluate the hardware performance, two deep learning models are deployed for benchmarking purpose. The first model is a modified VGG19 based on a study by Deitsch et al. (**Model A**) [1], and the other model is a modified concatenated model proposed in a study from Rahimzadeh et al. (**Model B**) [2]. These models were previously implemented in Vo et al [3]. The model compilation, training and validation practices are similar to those mentioned in Vo et al [3]. Besides, the mixed-precision policy is applied for model training to make it run faster and consume less memory.
 
 ![](images/ModelA.png)
 Figure 1: Network architecture of **Model A**. This model consists of a **VGG19 convolutional base** followed by four **convolutional layers**, a **Global Average Pooling** layer, and finally three **fully-connected neural** layers (the **Dropout** layers are excluded, but they are still presented in the actual implementation) [3].
@@ -47,11 +47,10 @@ Test | Application |
 Table 1: Application of basic operations in Deep Learning. 
 
 Below is our description of the alternative benchmark approach:
-* In DMM, we defined a matrix C as a product of (MxN) and (NxK) matrices. For example, (3072,128,1024) means the resulting matrix is a product of (3072x128) and (128x1024) matrices. To benchmark, we implemented five different multiplications, and measured the overall **total excution time** of these five. These multiplications included (3072,128,1024), (5124,9124,2560), (2560,64,2560), (7860,64,2560), and (1760,128,1760).
-* In SMM, we defined a matrix C as a product of (MxN) and (NxK) matrices, and (100 - Dx100)% of the (MxN) matrix is obmitted. For instance, (10752,1,3584,0.9) means the resulting matrix is a product of (10752x1) and (1x3584) matrices, while 10% of the (10752x1) matrix is obmitted. To benchmark, we implemented four different multiplications, and measured the overall **total excution time** of these five. These multiplications included (10752,1,3584,0.9), (7680,1500,2560,0.95), (7680,2,2560,0.95), and (7680,1,2560,0.95).
+* In DMM, we defined a matrix C as a product of `(MxN)` and `(NxK)` matrices. For example, `(3072,128,1024)` means the resulting matrix is a product of `(3072x128)` and `(128x1024)` matrices. To benchmark, we implemented five different multiplications, and measured the overall **total excution time** of these five. These multiplications included `(3072,128,1024)`, `(5124,9124,2560)`, `(2560,64,2560)`, `(7860,64,2560)`, and `(1760,128,1760)`.
+* In SMM, we defined a matrix C as a product of `(MxN)` and `(NxK)` matrices, and `(100 - Dx100)%` of the `(MxN)` matrix is obmitted. For instance, `(10752,1,3584,0.9)` means the resulting matrix is a product of `(10752x1)` and `(1x3584)` matrices, while 10% of the `(10752x1)` matrix is obmitted. To benchmark, we implemented four different multiplications, and measured the overall **total excution time** of these five. These multiplications included `(10752,1,3584,0.9)`, `(7680,1500,2560,0.95)`, `(7680,2,2560,0.95)`, and `(7680,1,2560,0.95)`.
 * In Convolve2D, we defined a simple model containing only convolution layers and pooling layers as in Figure 5, and measured the resulting **total execution time**.
 * In RNN, we defined a simple model containing recurrent neural layers as in Figure 6, and measured the resulting **total execution time**.
-
 
 ![](images/Conv1.png)
 
@@ -62,7 +61,7 @@ Figure 5: A simple model containing only convolution layers and pooling layers f
 Figure 6: A simple model containing only recurrent neural layers for the other benchmark approach.
 
 ## Results
-To provide a solid baseline for comparison among different setups, we benchmarked our own computing resources and recorded the results. Table 2 below provides the information of our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
+To provide a solid baseline for comparison among different setups, we benchmarked our computing resources and recorded the results. Table 2 below provides the information on our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
 
 | Component |            Setup 1           |           Setup 2          | Setup 3 |
 |:---------:|:----------------------------:|:--------------------------:|:-------:|
@@ -74,7 +73,7 @@ To provide a solid baseline for comparison among different setups, we benchmarke
 Table 2: Information of the setup used as the baseline for comparison.
 
 
-| Setup 1 | MNIST (s) | Zalando (s) | FLOPS ($10^9$) |
+| Setup 1 | MNIST (s) | Zalando (s) | FLOPS (10^9) |
 |---------|---------------|---------------|-------|
 | Model A   | 2317 | 2347 |  0.1155 |
 | Model B | <Placeholder> | <Placeholder> |       | 
@@ -98,21 +97,21 @@ Table 5: Results of the benchmark on MNIST and Zalando datasets for the 3rd setu
 
 | Setup 1                  | Excution time (s) | FLOPS (10^9) |
 |------------------------------|-------------------|---------------|
-| DMM  | 1.74     | <Placeholder> |
-| SMM | 14.97     | <Placeholder> |
-| Convolve2D | 217.42     | <Placeholder> |
+| DMM  | 1.74     | N/A |
+| SMM | 14.97     | N/A |
+| Convolve2D | 217.42     | <Placeholder>  |
 | RNN     | <Placeholder>     | <Placeholder> |
 
-Table 6: Results of the benchmark on GEMM, Convolve2D, and RNN for the 1st setup.
+Table 6: Results of the benchmark on GEMM, Convolve2D, and RNN for the 1st setup. Because we have not been able to measure the FLOPS count for DMM and SMM, we denoted here as N/A (Not Applicable). 
   
 | Setup 2                  | Excution time (s) | FLOPS (10^9) |
 |------------------------------|-------------------|---------------|
-| DMM  | 1.74     | <Placeholder> |
-| SMM | 14.97     | <Placeholder> |
-| Convolve2D | 217.42     | <Placeholder> |
+| DMM  | 3.18    | N/A |
+| SMM | 20.34     | N/A |
+| Convolve2D | *    | N/A |
 | RNN     | <Placeholder>     | <Placeholder> |
 
-Table 7: Results of the benchmark on GEMM, Convolve2D, and RNN for the 2nd setup.
+Table 7: Results of the benchmark on GEMM, Convolve2D, and RNN for the 2nd setup. Because we have not been able to measure the FLOPS count for DMM, SMM and Convolve2D, we denoted here as N/A (Not Applicable). On the other hand, because the execution time for Convolve2D is significant (>24 hours), we denoted it as *.
   
 | Setup 3                  | Excution time (s) | FLOPS (10^9) |
 |------------------------------|-------------------|---------------|
@@ -132,7 +131,7 @@ Contributors:
 * Huynh Quang Nguyen Vo (MSc), Doctoral Candidate, Aalto University
 
 ## Appendix
-1. For the theoretical backgrounds behind GEMM and recurrent network, please refer to the `Thereotical Background.ipynb` file.
+1. For the theoretical backgrounds behind GEMM and recurrent network, please refer to the `Theoretical Background.ipynb` file.
 2. For the installation of Python, Tensorflow, and other dependencies, please refer to the `Instruction Guide.ipynb` file.
 
 ## References
