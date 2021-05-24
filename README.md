@@ -80,14 +80,14 @@ Table 2: Information of the setup used as the baseline for comparison.
 
 Table 3: Results of the benchmark on MNIST and Zalando datasets for the 1st setup.
 
-| Setup 1 | MNIST (s) | Zalando (s) | FLOPS ($10^9$) |
+| Setup 1 | MNIST (s) | Zalando (s) | FLOPS (10^9) |
 |---------|---------------|---------------|-------|
 | Model A   | 2317 | 2347 |  0.1155 |
 | Model B | <Placeholder> | <Placeholder> |       | 
 
 Table 4: Results of the benchmark on MNIST and Zalando datasets for the 2nd setup.
 
-| Setup 1 | MNIST (s) | Zalando (s) | FLOPS ($10^9$) |
+| Setup 1 | MNIST (s) | Zalando (s) | FLOPS (10^9) |
 |---------|---------------|---------------|-------|
 | Model A   | 2317 | 2347 |  0.1155 |
 | Model B | <Placeholder> | <Placeholder> |       | 
