@@ -16,7 +16,7 @@ To evaluate the performance, the following metrics are used:
 4. **Computing resources issues/errors**: Ideally, a better performed setup will not encounter any computing resources issues/errors including but not limited to the Out-Of-Memory (OOM) error. 
 
 ## Methods
-To evalute the hardware performance,  two deep learning models are deployed for benchmarking purpose. The first model is a modified VGG19 based on a study by Deitsch et al. (**Model A**) [1], and the other model is a modified concatenated model proposed in a study from Rahimzadeh et al. (**Model B**) [2]. These models were previously implemented in Vo et al [3]. The model compilation, training and validation practices are similar to those mentioned in Vo et al [3]. Besides, the mixed precision policy is applied for model training to make it run faster and consume less memory.
+To evalute the hardware performance, two deep learning models are deployed for benchmarking purpose. The first model is a modified VGG19 based on a study by Deitsch et al. (**Model A**) [1], and the other model is a modified concatenated model proposed in a study from Rahimzadeh et al. (**Model B**) [2]. These models were previously implemented in Vo et al [3]. The model compilation, training and validation practices are similar to those mentioned in Vo et al [3]. Besides, the mixed precision policy is applied for model training to make it run faster and consume less memory.
 
 ![](images/ModelA.png)
 Figure 1: Network architecture of **Model A**. This model consists of a **VGG19 convolutional base** followed by four **convolutional layers**, a **Global Average Pooling** layer, and finally three **fully-connected neural** layers (the **Dropout** layers are excluded, but they are still presented in the actual implementation) [3].
@@ -44,7 +44,7 @@ Test | Application |
 | Stacking 2D-Convolution (Convolve2D) | Convolution Neural Network|
 | Recurrent Neural Network (RNN) | Dealing with Time Series Data/ Natural Language Processing |
 
-Table 1: The benchmark approach using basic operations. 
+Table 1: Application of basic operations in Deep Learning. 
 
 Below is our description of the alternative benchmark approach:
 * In DMM, we defined a matrix C as a product of (MxN) and (NxK) matrices. For example, (3072,128,1024) means the resulting matrix is a product of (3072x128) and (128x1024) matrices. To benchmark, we implemented five different multiplications, and measured the overall **total excution time** of these five. These multiplications included (3072,128,1024), (5124,9124,2560), (2560,64,2560), (7860,64,2560), and (1760,128,1760).
@@ -64,32 +64,64 @@ Figure 6: A simple model containing only recurrent neural layers for the other b
 ## Results
 To provide a solid baseline for comparison among different setups, we benchmarked our own computing resources and recorded the results. Table 2 below provides the information of our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
 
-Component | Description
-| ------------ | ------------- |
-| CPU | Intel(R) Core(TM) i7-10750H @2.60 GHz |
-| GPU | NVIDIA GeForce RTX 2060 5980 MB |
-| Memory | 16384 MB RAM |
-| Storage | 476 GB |
+| Component |            Setup 1           |           Setup 2          | Setup 3 |
+|:---------:|:----------------------------:|:--------------------------:|:-------:|
+| CPU       | Core(TM) i7-10750H @2.60 GHz | Core(TM) i7-8665U @1.90GHz |         |
+| GPU       | GeForce RTX 2060 5980 MB     | Not Applicable             |         |
+| Memory    | 16384 MB RAM                 | 8192 MB RAM                |         |
+| Storage   | 476 GB                       | 476 Gb                     |         |
 
 Table 2: Information of the setup used as the baseline for comparison.
 
 
-|     | MNIST (s) | Zalando (s) | FLOPS (10^9) |
+| Setup 1 | MNIST (s) | Zalando (s) | FLOPS ($10^9$) |
 |---------|---------------|---------------|-------|
 | Model A   | 2317 | 2347 |  0.1155 |
 | Model B | <Placeholder> | <Placeholder> |       | 
 
-Table 3: Results of the benchmark on MNIST and Zalando datasets.
+Table 3: Results of the benchmark on MNIST and Zalando datasets for the 1st setup.
+
+| Setup 1 | MNIST (s) | Zalando (s) | FLOPS ($10^9$) |
+|---------|---------------|---------------|-------|
+| Model A   | 2317 | 2347 |  0.1155 |
+| Model B | <Placeholder> | <Placeholder> |       | 
+
+Table 4: Results of the benchmark on MNIST and Zalando datasets for the 2nd setup.
+
+| Setup 1 | MNIST (s) | Zalando (s) | FLOPS ($10^9$) |
+|---------|---------------|---------------|-------|
+| Model A   | 2317 | 2347 |  0.1155 |
+| Model B | <Placeholder> | <Placeholder> |       | 
+
+Table 5: Results of the benchmark on MNIST and Zalando datasets for the 3rd setup.
 
 
-| Operation                    | Excution time (s) | FLOPS         |
+| Setup 1                  | Excution time (s) | FLOPS (10^9) |
 |------------------------------|-------------------|---------------|
 | DMM  | 1.74     | <Placeholder> |
 | SMM | 14.97     | <Placeholder> |
 | Convolve2D | 217.42     | <Placeholder> |
 | RNN     | <Placeholder>     | <Placeholder> |
 
-Table 4: Results of the benchmark on GEMM, Convolve2D, and RNN.
+Table 6: Results of the benchmark on GEMM, Convolve2D, and RNN for the 1st setup.
+  
+| Setup 2                  | Excution time (s) | FLOPS (10^9) |
+|------------------------------|-------------------|---------------|
+| DMM  | 1.74     | <Placeholder> |
+| SMM | 14.97     | <Placeholder> |
+| Convolve2D | 217.42     | <Placeholder> |
+| RNN     | <Placeholder>     | <Placeholder> |
+
+Table 7: Results of the benchmark on GEMM, Convolve2D, and RNN for the 2nd setup.
+  
+| Setup 3                  | Excution time (s) | FLOPS (10^9) |
+|------------------------------|-------------------|---------------|
+| DMM  | 1.74     | <Placeholder> |
+| SMM | 14.97     | <Placeholder> |
+| Convolve2D | 217.42     | <Placeholder> |
+| RNN     | <Placeholder>     | <Placeholder> |
+
+Table 7: Results of the benchmark on GEMM, Convolve2D, and RNN for the 3rd setup.
 
 
 ## Acknowledgements
