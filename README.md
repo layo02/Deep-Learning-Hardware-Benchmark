@@ -124,7 +124,6 @@ Table 7: Results of the benchmark on GEMM, Convolve2D, and RNN for the 3rd setup
 
 
 ## Acknowledgements
-This project is the collaboration between Aalto University and RMIT Vietnam.
 
 Contributors: 
 * Vinh-Khuong Nguyen (Dr), Associated Lecturer, RMIT Vietnam
