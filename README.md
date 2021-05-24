@@ -127,7 +127,7 @@ Table 7: Results of the benchmark on GEMM, Convolve2D, and RNN for the 3rd setup
 
 Contributors: 
 * Vinh-Khuong Nguyen (Dr), Associated Lecturer, RMIT Vietnam
-* Huynh Quang Nguyen Vo (MSc), Doctoral Candidate, Aalto University
+* Huynh Quang Nguyen Vo (MSc), Aalto University
 
 ## Appendix
 1. For the theoretical backgrounds behind GEMM and recurrent network, please refer to the `Theoretical Background.ipynb` file.
