@@ -54,12 +54,12 @@ Figure 3: A simple model containing only convolution layers and pooling layers f
 ## Results
 To provide a solid baseline for comparison among different setups, we benchmarked our computing resources and recorded the results. Table 2 below provides the information on our setup. Table 3 provides the results of our benchmark for the **total execution time** on MNIST and Zalando datasets, respectively. Table 4  provides the results of our benchmark for the **total execution time** on GEMM and RNN. Finally, Table 5 provides the results of our benchmark for the **total prediction time**.
 
-| Component |            Setup 1           |           Setup 2          |
-|:---------:|:----------------------------:|:--------------------------:|
-| CPU       | Core(TM) i7-10750H @2.60 GHz | Core(TM) i9-10900K @3.00 GHz |     
-| GPU       | GeForce RTX 2060 5980 MB     | GeForce RTX 3070 7980 MB | 
-| Memory    | 16384 MB RAM                 | 32384 MB RAM | 
-| Storage   | 476 GB                       | 968 GB SSD |
+|         |           Setup 1           |           Setup 2           |           Setup 3           |
+|---------|:---------------------------:|:---------------------------:|:---------------------------:|
+| CPU     | Core(TM) i7-10750H @2.60GHz | Core(TM) i9-10900K @3.70GHz | Core(TM) i7-8700K @3.70 GHz |
+| GPU     | GeForce RTX 2060 5980MB     | GeForce RTX 3070 8031MB     | GeForce RTX 2070 8031MB     |
+| Memory  | 16384MB RAM @ DDR4 3200MHz  | 32384MB RAM @ DDR4 3200MHz  | 32768MB RAM @ DDR4 3200MHz  |
+| Storage | 476GB SSD                   | 968GB SSD                   | 468GB SSD                   |
 
 Table 2: Information of the setup used as the baseline for comparison.
 
