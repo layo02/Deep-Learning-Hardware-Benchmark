@@ -47,7 +47,7 @@ We implemented our alternative approach based on the DeepBench work by Baidu [5]
 
 ![](images/Conv1.png)
 
-Figure 5: A simple model containing only convolution layers and pooling layers for the other benchmark approach.
+Figure 3: A simple model containing only convolution layers and pooling layers for the other benchmark approach.
 
 3. To evaluate **total inference time**, we will load the already trained weights from our two models (**Model A** and **Model B**) having the best validation accuracy, and conduct a prediction run on the test set from the **Original MNIST** and **Zalando MNIST**, respectively. Additionally, we will also evaluate the prediction capability of these two models using Class Activation Maps (CAM).
 
@@ -116,10 +116,10 @@ Contributors:
 2. Visualization of the datasets used in this repository.
   
 ![](images/mnist.png)
-Figure 3: Visualization of the original MNIST dataset developed by Yann LeCun et al [4].
+Figure 4: Visualization of the original MNIST dataset developed by Yann LeCun et al [4].
 
 ![](images/zalando.png)
-Figure 4: Visualization of the Zalando MNIST dataset developed by Han Xiao et al [5].
+Figure 5: Visualization of the Zalando MNIST dataset developed by Han Xiao et al [5].
   
 ## References
 <a id="1">[1]</a> S. Deitsch, V. Christlein, S. Berger, C. Buerhop-Lutz, A. Maier, F. Gallwitz, and C. Riess, “Automatic classification of defective photovoltaic module cells in electroluminescence images,” Solar Energy, vol. 185, p. 455–468, 06-2019.
