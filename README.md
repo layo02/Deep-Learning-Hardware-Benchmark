@@ -145,5 +145,7 @@ Figure 5: Visualization of the Zalando MNIST dataset developed by Han Xiao et al
   
 <a id = "10">[10]</a> ML Commons. Availabke at: https://mlcommons.org/en/
 
-<a id = "11"></a> S.  Poppi,  M.  Cornia,  L.  Baraldi,  and  R.  Cucchiara,  “Revisiting  theevaluation of class activation mapping for explainability: A novel metricand experimental analysis,” 2021.
+<a id = "11"></a>[11] S.  Poppi,  M.  Cornia,  L.  Baraldi,  and  R.  Cucchiara,  “Revisiting  theevaluation of class activation mapping for explainability: A novel metricand experimental analysis,” 2021.
+  
+<a id = "12"></a>[12] W.  Dai   and  D.   Berleant,  “Benchmarking  contemporary   deep  learn-ing  hardware  and  frameworks:  A  survey  of  qualitative  metrics,” 2019 IEEE First International Conference on Cognitive Machine Intelligence (CogMI), Dec 2019.
   
