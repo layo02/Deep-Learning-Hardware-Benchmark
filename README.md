@@ -63,45 +63,7 @@ To provide a solid baseline for comparison among different setups, we benchmarke
 
 Table 2: Information of the setup used as the baseline for comparison.
 
-***
 
-| Setup 1 | MNIST (s) | Zalando (s) | FLOPS (10^9) |
-|---------|---------------|---------------|-------|
-| Model A | 2317 | 2347 |  0.1155 |
-| Model B | <Placeholder> | <Placeholder> | <Placeholder> | 
-
-Table 3: Results of the benchmark on MNIST and Zalando datasets for the 1st setup.
-
-***
-  
-| Setup 2 | MNIST (s) | Zalando (s) | FLOPS (10^9) |
-|---------|---------------|---------------|-------|
-| Model A | 2021 | 2046 |  0.2155 |
-| Model B | <Placeholder> | <Placeholder> |  <Placeholder> | 
-
-Table 4: Results of the benchmark on MNIST and Zalando datasets for the 2nd setup.
-
-***
-  
-| Setup 1                  | Excution time (s) | FLOPS (10^9) |
-|------------------------------|-------------------|---------------|
-| DMM  | 1.74     | N/A |
-| SMM | 14.97     | N/A |
-| Convolve2D | 217.42     | <Placeholder>  |
-| RNN     | <Placeholder>     | <Placeholder> |
-
-Table 6: Results of the benchmark on GEMM, Convolve2D, and RNN for the 1st setup. Because we have not been able to measure the FLOPS count for DMM and SMM, we denoted here as N/A (Not Applicable). 
-
-***
-  
-| Setup 2                  | Excution time (s) | FLOPS (10^9) |
-|------------------------------|-------------------|---------------|
-| DMM  | 0.94    |<Placeholder> |
-| SMM | 10.12     | <Placeholder> |
-| Convolve2D | 198.05    | <Placeholder> |
-| RNN     | 187.26     | <Placeholder> |
-
-Table 7: Results of the benchmark on GEMM, Convolve2D, and RNN for the 2nd setup. Because we have not been able to measure the FLOPS count for DMM, SMM and Convolve2D, we denoted here as N/A (Not Applicable). 
 
 Additionally, the Machine Learning Benchmark Organization (MLPerf) also provided a comprehensive list of training and testing results from many different setups for comparison. The latest results (v.07 as of May 2021) are available at: https://mlcommons.org/en/
 
