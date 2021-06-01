@@ -2,7 +2,7 @@ from tensorflow.keras import backend
 from tensorflow.keras.applications import VGG19, Xception, ResNet152V2
 from tensorflow.keras.layers import Conv2D, GlobalAveragePooling2D, Dropout, Dense, concatenate
 from tensorflow.keras import regularizers
-from tensorflow.keras import Model, Input
+from tensorflow.keras import Model, Input, Sequential
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.optimizers import Adam
 
