@@ -63,8 +63,16 @@ To provide a solid baseline for comparison among different setups, we benchmarke
 
 Table 2: Information of the setups used as the benchmark baseline for comparison.
 
-The detailed benchmark results are included in the directory `results/results.csv`. Below is the summary of our baseline results.
+Below is the summarized visualizatons of our baseline results that are created using SAS JMP. We included a compiled results in `results/results.csv' for reference.
 
+![](images/Total%20Execution%20Time.png)
+Figure 4: Total Exection Time between the setups. 
+
+![](images/Total%20Inference%20Time.png)
+Figure 5: Total Inference Time between the setups. 
+
+![](images/Bottleneck%26FLOPS.png)
+Figure 6: The bottlenecking factor and the number of thereotical FLOPS between the setups.
 
 Additionally, the Machine Learning Benchmark Organization (MLPerf) also provided a comprehensive list of training and testing results from many different setups for comparison. The latest results (v.07 as of May 2021) are available at: https://mlcommons.org/en/
 
@@ -76,13 +84,13 @@ Contributors:
 
 ## Appendix
 1. For the installation of Python, Tensorflow, and other dependencies, please refer to the `Instruction Guide.ipynb` file.
-2. Visualization of the datasets used in this repository.
+2. Visualizations of the respective datasets used in this repository.
   
 ![](images/mnist.png)
-Figure 4: Visualization of the original MNIST dataset developed by Yann LeCun et al [4].
+Figure 7: Visualization of the original MNIST dataset developed by Yann LeCun et al [4].
 
 ![](images/zalando.png)
-Figure 5: Visualization of the Zalando MNIST dataset developed by Han Xiao et al [5].
+Figure 8: Visualization of the Zalando MNIST dataset developed by Han Xiao et al [5].
   
 ## References
 <a id="1">[1]</a> S. Deitsch, V. Christlein, S. Berger, C. Buerhop-Lutz, A. Maier, F. Gallwitz, and C. Riess, “Automatic classification of defective photovoltaic module cells in electroluminescence images,” Solar Energy, vol. 185, p. 455–468, 06-2019.
