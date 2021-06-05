@@ -1,0 +1,104 @@
+
+Graph Builder(
+	Size( 1432, 739 ),
+	Show Control Panel( 0 ),
+	Variables(
+		X( :Dataset ),
+		X( :Setup, Position( 1 ) ),
+		Y( :Execution Time ),
+		Overlay( :Model )
+	),
+	Elements( Bar( X( 2 ), X( 1 ), Y, Legend( 5 ), Label( "Label by Value" ) ) ),
+	SendToReport(
+		Dispatch(
+			{},
+			"Dataset",
+			ScaleBox,
+			{Label Row( 1, {Lower Frame( 1 ), Show Major Grid( 1 )} ),
+			Label Row( 2, Show Major Grid( 1 ) )}
+		),
+		Dispatch(
+			{},
+			"Execution Time",
+			ScaleBox,
+			{Label Row(
+				{Show Major Grid( 1 ), Show Minor Grid( 1 ), Show Minor Labels( 1 )}
+			)}
+		),
+		Dispatch(
+			{},
+			"graph title",
+			TextEditBox,
+			{Set Text( "Total Execution Time" )}
+		),
+		Dispatch( {}, "Y title", TextEditBox, {Set Text( "Execution Time (s)" )} )
+	)
+);
+
+Graph Builder(
+	Size( 1432, 739 ),
+	Show Control Panel( 0 ),
+	Variables( X( :Setup ), Y( :Inference Time ), Overlay( :Model ) ),
+	Elements( Bar( X, Y, Legend( 9 ), Label( "Label by Value" ) ) ),
+	SendToReport(
+		Dispatch(
+			{},
+			"Setup",
+			ScaleBox,
+			{Label Row( {Lower Frame( 1 ), Show Major Grid( 1 )} )}
+		),
+		Dispatch(
+			{},
+			"Inference Time",
+			ScaleBox,
+			{Label Row(
+				{Show Major Grid( 1 ), Show Minor Grid( 1 ), Show Minor Labels( 1 )}
+			)}
+		),
+		Dispatch(
+			{},
+			"graph title",
+			TextEditBox,
+			{Set Text( "Total Inference Time" )}
+		),
+		Dispatch( {}, "Y title", TextEditBox, {Set Text( "Inference Time (s)" )} )
+	)
+);
+
+Graph Builder(
+	Size( 1362, 739 ),
+	Show Control Panel( 0 ),
+	Variables( X( :Setup ), Y( :Bottlenecking ), Overlay( :Theoretical FLOPS ) ),
+	Elements( Bar( X, Y, Legend( 4 ), Label( "Label by Value" ) ) ),
+	SendToReport(
+		Dispatch(
+			{},
+			"Setup",
+			ScaleBox,
+			{Label Row(
+				{Inside Ticks( 1 ), Lower Frame( 1 ), Show Major Grid( 1 )}
+			)}
+		),
+		Dispatch(
+			{},
+			"Bottlenecking",
+			ScaleBox,
+			{Label Row(
+				{Show Major Grid( 1 ), Show Minor Grid( 1 ), Show Minor Labels( 1 )}
+			)}
+		),
+		Dispatch(
+			{},
+			"graph title",
+			TextEditBox,
+			{Set Text( "Bottlenecking & FLOPS " )}
+		),
+		Dispatch( {}, "Y title", TextEditBox, {Set Text( "Bottlenecking (%)" )} ),
+		Dispatch(
+			{},
+			"400",
+			LegendBox,
+			{Set Title( "Theoretical FLOPS (Gflops)" )}
+		)
+	)
+);
