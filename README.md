@@ -80,7 +80,7 @@ Additionally, the Machine Learning Benchmark Organization (MLPerf) also provided
 
 Contributors: 
 * Vinh-Khuong Nguyen (Dr), Associated Lecturer, RMIT Vietnam.
-* Huynh Quang Nguyen Vo (MSc), Doctoral Candidate, Aalto University.
+* Huynh Quang Nguyen Vo (MSc), Aalto University.
 
 ## Appendix
 1. For the installation of Python, Tensorflow, and other dependencies, please refer to the `Instruction Guide.ipynb` file.
