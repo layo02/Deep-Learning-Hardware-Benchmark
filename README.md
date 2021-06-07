@@ -4,12 +4,12 @@
 ## Introduction
 This repository contains our proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for complex deep learning projects.
 
-## Scope:
+## Scope
 * The benchmark evaluates the performance of a setup having a single CPU, a single GPU, RAM and memory storage. The performance of multi-CPUs/multi-GPUs or server-based is included in our scope.
 * The benchmark is built on the **Anaconda** distribution of Python, and the **Jupyter Notebook** computational environment. The deep learning models mentioned in this benchmarked are implemented using the **Keras** application programming interface (API).
 * Our goal is to develop a verified approach to conduct the hardware benchmark that is quick and easy to use. 
 
-## Evaluation metrics:
+## Evaluation metrics
 There are various metrics to benchmark the performance capabilities of a setup for deep learning purposes. Here, the following metrics are used:
 1. **Total execution time**: the **total execution time** includes both the **total training time** and the **total validation time** of a deep learning model on a dataset after a defined number of epochs. Here, the number of epochs is 100. The lower the **total execution time** the better.
 2. **Total inference time**: the **total inference time** includes both the **model loading time** (the time required to fully load a set of pre-trained weights to implement a model) and the **total prediction time** of a deep learning model on a test dataset. Similar to the **total execution time**, the lower the **total inference time** the better.
