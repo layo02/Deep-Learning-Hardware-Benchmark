@@ -1,5 +1,6 @@
 # Deep-Learning-Hardware-Benchmark
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4905229.svg)](https://doi.org/10.5281/zenodo.4905229)
 
 ## Introduction
 This repository contains our proposed implementation for benchmarking to evaluate whether a setup of hardware is feasible for complex deep learning projects.
