@@ -91,7 +91,9 @@ Figure 7: Visualization of the original MNIST dataset developed by Yann LeCun et
 
 ![](images/zalando.png)
 Figure 8: Visualization of the Zalando MNIST dataset developed by Han Xiao et al [5].
-  
+
+3. List of the packages used in our implementation is provided in the file `packages.txt` for reproduction.
+
 ## References
 <a id="1">[1]</a> S. Deitsch, V. Christlein, S. Berger, C. Buerhop-Lutz, A. Maier, F. Gallwitz, and C. Riess, “Automatic classification of defective photovoltaic module cells in electroluminescence images,” Solar Energy, vol. 185, p. 455–468, 06-2019.
 
