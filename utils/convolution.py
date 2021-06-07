@@ -24,3 +24,6 @@ def convolve2D(IMG_SIZE1,IMG_SIZE2,IMG_CH,*args):
     model.compile(loss = 'categorical_crossentropy', optimizer = opt, metrics = ['accuracy', 'Precision', 'Recall'])
     
     return model
+##
+#
+# ABCXYZ
