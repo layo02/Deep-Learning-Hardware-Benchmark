@@ -49,7 +49,7 @@ We implemented our alternative approach based on the DeepBench work by Baidu [5]
 
 Figure 3: A simple model containing only convolution layers and pooling layers for the alternative benchmark approach.
 
-3. To evaluate **total inference time**, we loaded the already trained weights from one of our models (denoted as **Model B-benchmarked**) which has the best validation accuracy, and conducted a prediction run on the test set from the **Original MNIST** and **Zalando MNIST**, respectively. 
+3. To evaluate **total inference time**, we loaded the already trained weights from our models (denoted as **Model A-benchmarked** and **Model B-benchmarked**, respectively) which has the best validation accuracy, and conducted a prediction run on the test set from the **Zalando MNIST**. These files are available on Zenodo: [Inference Models](https://zenodo.org/record/4905213#.YL1-P_kzaUk)
 
 ## Results
 To provide a solid baseline for comparison among different setups, we benchmarked our computing resources and recorded the results. Table 2 below provides the information on our setup. 
