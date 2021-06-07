@@ -40,8 +40,8 @@ Test | Application |
 Table 1: Application of basic operations in Deep Learning. 
 
 We implemented our alternative approach based on the DeepBench work by Baidu [5]:
-* In DMM, we defined a matrix C as a product of `(MxN)` and `(NxK)` matrices. For example, `(3072,128,1024)` means the resulting matrix is a product of `(3072x128)` and `(128x1024)` matrices. To benchmark, we implemented five different multiplications, and measured the overall **total excution time** of these five. These multiplications included `(3072,128,1024)`, `(5124,9124,2560)`, `(2560,64,2560)`, `(7860,64,2560)`, and `(1760,128,1760)`.
-* In SMM, we defined a matrix C as a product of `(MxN)` and `(NxK)` matrices, and `(100 - Dx100)%` of the `(MxN)` matrix is obmitted. For instance, `(10752,1,3584,0.9)` means the resulting matrix is a product of `(10752x1)` and `(1x3584)` matrices, while 10% of the `(10752x1)` matrix is obmitted. To benchmark, we implemented four different multiplications, and measured the overall **total excution time** of these five. These multiplications included `(10752,1,3584,0.9)`, `(7680,1500,2560,0.95)`, `(7680,2,2560,0.95)`, and `(7680,1,2560,0.95)`.
+* In DMM, we defined a matrix C as a product of `(MxN)` and `(NxK)` matrices. For example, `(3072,128,1024)` means the resulting matrix is a product of `(3072x128)` and `(128x1024)` matrices. To benchmark, we implemented five different multiplications, and measured the overall **total execution time** of these five. These multiplications included `(3072,128,1024)`, `(5124,9124,2560)`, `(2560,64,2560)`, `(7860,64,2560)`, and `(1760,128,1760)`.
+* In SMM, we defined a matrix C as a product of `(MxN)` and `(NxK)` matrices, and `(100 - Dx100)%` of the `(MxN)` matrix is obmitted. For instance, `(10752,1,3584,0.9)` means the resulting matrix is a product of `(10752x1)` and `(1x3584)` matrices, while 10% of the `(10752x1)` matrix is obmitted. To benchmark, we implemented four different multiplications, and measured the overall **total execution time** of these five. These multiplications included `(10752,1,3584,0.9)`, `(7680,1500,2560,0.95)`, `(7680,2,2560,0.95)`, and `(7680,1,2560,0.95)`.
 * In Convolve2D, we defined a simple model containing only convolution layers and pooling layers as in Figure 5, and measured the resulting **total execution time**. The dataset used for this training this model is the **Zalando MNIST** by Xiao et al.
 * We did not implement the **RNN** due to several issues caused by the new version of Keras.
 
@@ -63,16 +63,16 @@ To provide a solid baseline for comparison among different setups, we benchmarke
 
 Table 2: Information of the setups used as the benchmark baseline for comparison.
 
-Below is the summarized visualizatons of our baseline results that are created using SAS JMP. We included a compiled results in `results/results.csv' for reference.
+Below is the summarized visualizations of our baseline results that are created using SAS JMP. We included a compiled results in `results/results.csv` for reference.
 
 ![](images/Total%20Execution%20Time.png)
-Figure 4: Total Exection Time between the setups. 
+Figure 4: Total Execution Time between the setups. 
 
 ![](images/Total%20Inference%20Time.png)
 Figure 5: Total Inference Time between the setups. 
 
 ![](images/Bottleneck%26FLOPS.png)
-Figure 6: The bottlenecking factor and the number of thereotical FLOPS between the setups.
+Figure 6: The bottlenecking factor and the number of theoretical FLOPS between the setups.
 
 Additionally, the Machine Learning Benchmark Organization (MLPerf) also provided a comprehensive list of training and testing results from many different setups for comparison. The latest results (v.07 as of May 2021) are available at: https://mlcommons.org/en/
 
@@ -116,9 +116,8 @@ Figure 8: Visualization of the Zalando MNIST dataset developed by Han Xiao et al
 
 <a id = "9">[9]</a> F. Chollet, “Keras,” 2015. Available at: https://github.com/fchollet/keras
   
-<a id = "10">[10]</a> ML Commons. Availabke at: https://mlcommons.org/en/
+<a id = "10">[10]</a> ML Commons. Available at: https://mlcommons.org/en/
 
-<a id = "11"></a>[11] S.  Poppi,  M.  Cornia,  L.  Baraldi,  and  R.  Cucchiara,  “Revisiting  theevaluation of class activation mapping for explainability: A novel metricand experimental analysis,” 2021.
+<a id = "11"></a>[11] S.  Poppi,  M.  Cornia,  L.  Baraldi,  and  R.  Cucchiara,  “Revisiting the evaluation of class activation mapping for explainability: A novel metric and experimental analysis,” 2021.
   
-<a id = "12"></a>[12] W.  Dai   and  D.   Berleant,  “Benchmarking  contemporary   deep  learn-ing  hardware  and  frameworks:  A  survey  of  qualitative  metrics,” 2019 IEEE First International Conference on Cognitive Machine Intelligence (CogMI), Dec 2019.
-  
+<a id = "12"></a>[12] W.  Dai and  D.   Berleant,  “Benchmarking contemporary deep learning hardware and frameworks:  A  survey of qualitative metrics,” 2019 IEEE First International Conference on Cognitive Machine Intelligence (CogMI), Dec 2019.
