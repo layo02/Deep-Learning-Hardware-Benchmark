@@ -1,6 +1,7 @@
 dependencies:
     - jupyter
     - scikit-learn
+    - scikit-learn-intelex
     - scipy
     - pandas
     - pandas-datareader
