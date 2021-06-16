@@ -65,13 +65,13 @@ To provide a solid baseline for comparison among different setups, we benchmarke
 
 Table 2: Information of the setups used as the benchmark baseline for comparison.
 
-Below is the summarized visualizations of our baseline results that are created using SAS JMP. We included a compiled results in `results/results.csv` for reference.
+Below is the summarized visualizations of our baseline results (the results for the alternative approach are obmited) that are created using SAS JMP. We included a compiled results in `results/results.csv` for reference.
 
 ![](images/Total%20Execution%20Time.png)
-Figure 4: Total Execution Time between the setups. 
+Figure 4: Total Execution Time between the setups when trained on the **original MNIST** and **Zalando** datasets. 
 
 ![](images/Total%20Inference%20Time.png)
-Figure 5: Total Inference Time between the setups. 
+Figure 5: Total Inference Time between the setups when validated on the **Zalando** datasets. 
 
 ![](images/Bottleneck%26FLOPS.png)
 Figure 6: The bottlenecking factor and the number of theoretical FLOPS between the setups.
