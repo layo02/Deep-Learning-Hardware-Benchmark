@@ -85,7 +85,8 @@ Contributors:
 * Huynh Quang Nguyen Vo (MSc), Aalto University.
 
 ## Appendix
-1. For the installation of Python, Tensorflow, and other dependencies, please refer to the `Instruction Guide.ipynb` file.
+1. For the installation of Python, Tensorflow, and other dependencies, please refer to the `Instruction Guide (Python 3.7).ipynb` and `Instruction Guide (Python 3.8).ipynb` files. So far, all programs are developed under Python 3.7.
+
 2. Visualizations of the respective datasets used in this repository.
   
 ![](images/mnist.png)
